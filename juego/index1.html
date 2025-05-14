@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <!-- Codificación y escalado responsivo -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juego Arduino Interactivo</title>
 
-  <!-- Fuente Open Sans -->
+  <!-- Google Fonts: Fuente moderna y legible -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-  <!-- Librerías de p5.js y sonido -->
+  <!-- Librerías principales de p5.js -->
+  <!-- p5.js: biblioteca base -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <!-- p5.sound.js: soporte de audio -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
 
-  <!-- Sketch del juego -->
+  <!-- Archivo de lógica del juego (debe estar en el mismo directorio) -->
   <script src="sketch.js" defer></script>
 
+  <!-- Estilos personalizados -->
   <style>
+    /* Estilo base de la página */
     body {
       margin: 0;
-      background-color: #e0f2f1;
+      background-color: #e0f2f1; /* Color pastel relajante */
       font-family: "Open Sans", sans-serif;
       color: #333;
     }
 
+    /* Estilo para el canvas generado por p5.js */
     canvas {
       display: block;
       margin: 20px auto;
       border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
     }
 
+    /* Estilo general para todos los botones */
     button {
       font-family: "Open Sans", sans-serif;
-      font-size: 16px;
+      font-size: 20px;
       background-color: #00695c;
       color: white;
       border: none;
       border-radius: 10px;
-      padding: 14px 24px;
-      margin: 10px;
+      padding: 20px 32px;
+      margin: 16px;
       cursor: pointer;
       transition: all 0.3s ease;
     }
 
+    /* Estilo al pasar el cursor por los botones */
     button:hover {
       background-color: #004d40;
       transform: scale(1.05);
@@ -53,8 +60,7 @@
 
 <body>
   <main>
-    <!-- El canvas del juego se insertará aquí dinámicamente -->
+    <!-- Aquí se insertará automáticamente el canvas del juego mediante p5.js -->
   </main>
 </body>
-
 </html>

@@ -1,6 +1,6 @@
 // sketch.js - Juego Arduino Interactivo
 // Autor: Justino Gato Muélledes
-// Descripción: Versión con interfaz profesional, salida con retardo de 5 segundos, botones mejorados
+// Descripción: Juego con niveles de montaje electrónico.
 
 let anchoPantalla = 1600;
 let altoPantalla = 900;
@@ -17,6 +17,7 @@ let mensajeCorrecto = false;
 let mensajeError = false;
 let botones = {};
 let tamComponente = 130;
+let parpadeoVisible = true; // Estado para el parpadeo del mensaje
 
 const componentesCorrectos1 = ["RESISTOR", "RESISTOR", "PULSADOR", "LED", "LED"];
 const componentesCorrectos2 = ["LED_VERDE", "LED_ROJO", "PULSADOR", "RESISTOR", "RESISTOR"];
@@ -45,6 +46,11 @@ function setup() {
   createCanvas(anchoPantalla, altoPantalla);
   textFont("Open Sans");
   crearBotones();
+
+  // Temporizador de parpadeo del mensaje de instrucciones
+  setInterval(() => {
+    parpadeoVisible = !parpadeoVisible;
+  }, 800);
 }
 
 function draw() {
@@ -57,8 +63,15 @@ function draw() {
   } else if (estado.startsWith("NIVEL")) {
     image(placaImg, 120, 120, 800, 500);
     for (let c of componentes) c.display();
-    if (mensajeCorrecto) mostrarMensaje("✓ Montaje correcto. ¡Enhorabuena!", color(0, 200, 0));
-    if (mensajeError) mostrarMensaje("✗ Error: Revisa los componentes.", color(200, 0, 0));
+    if (mensajeCorrecto) mostrarMensaje("\u2713 Montaje correcto. \u00a1Enhorabuena!", color(0, 200, 0));
+    if (mensajeError) mostrarMensaje("\u2717 Error: Revisa los componentes.", color(200, 0, 0));
+
+    if (parpadeoVisible) {
+      fill("#000000");
+      textAlign(CENTER);
+      textSize(28);
+      text("\u2B07 Arrastra los componentes necesarios a la placa para realizar el montaje \u2B07", width / 2, 115);
+    }
   }
 }
 
@@ -70,6 +83,7 @@ function mostrarCabecera() {
   textAlign(CENTER, CENTER);
   textSize(24);
   text("ESCUELA ARDUINO | Interfaz Interactiva de Montaje", width / 2, 35);
+
   if (estado.startsWith("NIVEL")) {
     fill("#004d40");
     textAlign(LEFT);
@@ -82,34 +96,34 @@ function mostrarMenu() {
   fill(255, 255, 255, 160);
   stroke("#004d40");
   strokeWeight(2);
-  rect(60, 100, 420, 340, 20);
+  rect(60, 100, 520, 400, 20);
 }
 
 function crearBotones() {
-  botones.nivel1 = createButton("Montaje 1: LEDs + Pulsador con resistencias");
+  botones.nivel1 = createButton("Montaje 1: Encendido de dos LEDs mediante un pulsador");
   botones.nivel1.position(90, 130);
-  botones.nivel1.size(380, 50);
+  botones.nivel1.size(620, 60);
   botones.nivel1.mousePressed(() => iniciarNivel("NIVEL1"));
 
-  botones.nivel2 = createButton("Montaje 2: Semáforo Peatonal con LEDs y Pulsador");
-  botones.nivel2.position(90, 200);
-  botones.nivel2.size(380, 50);
+  botones.nivel2 = createButton("Montaje 2: Semáforo de peatones con LEDs por pulsador");
+  botones.nivel2.position(90, 210);
+  botones.nivel2.size(620, 60);
   botones.nivel2.mousePressed(() => iniciarNivel("NIVEL2"));
 
-  botones.nivel3 = createButton("Montaje 3: Parking con Sensor y Servomotor");
-  botones.nivel3.position(90, 270);
-  botones.nivel3.size(380, 50);
+  botones.nivel3 = createButton("Montaje 3: Barrera de parking con sensor, servomotor y LEDs");
+  botones.nivel3.position(90, 290);
+  botones.nivel3.size(620, 60);
   botones.nivel3.mousePressed(() => iniciarNivel("NIVEL3"));
 
   botones.verificar = createButton("VERIFICAR MONTAJE");
   botones.verificar.position(width - 240, height - 70);
-  botones.verificar.size(200, 50);
+  botones.verificar.size(200, 90);
   botones.verificar.mousePressed(verificarMontaje);
   botones.verificar.hide();
 
   botones.salir = createButton("Salir del juego");
-  botones.salir.position(90, 340);
-  botones.salir.size(380, 50);
+  botones.salir.position(90, 370);
+  botones.salir.size(480, 60);
   botones.salir.mousePressed(salirDelJuego);
 }
 
@@ -120,13 +134,13 @@ function iniciarNivel(nivel) {
   botones.verificar.show();
 
   if (nivel === "NIVEL1") {
-    instruccion = "Enciende dos LEDs mediante un pulsador y resistencias";
+    instruccion = "Encendido de dos LEDs mediante un pulsador";
     crearComponentesNivel1();
   } else if (nivel === "NIVEL2") {
-    instruccion = "Construye un semáforo con LEDs, resistencias y pulsador";
+    instruccion = "Semáforo de peatones con LEDs por pulsador";
     crearComponentesNivel2();
   } else {
-    instruccion = "Simula un parking con sensor, servomotor y LEDs";
+    instruccion = "Subida de barrera en un parking con sensor, servomotor y señalización con LEDs";
     crearComponentesNivel3();
   }
 }
@@ -135,7 +149,7 @@ function salirDelJuego() {
   musicaSalida.play();
   setTimeout(() => {
     window.location.href = "index1.html";
-  }, 5000); // Espera 5 segundos antes de salir
+  }, 5000);
 }
 
 function mostrarMensaje(msg, c) {
