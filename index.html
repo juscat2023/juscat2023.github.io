@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma Educativa Interactiva sobre Arduino">
+  <meta name="author" content="Plataforma Educativa">
+  <title>Plataforma Arduino</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #003366;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #e0f7fa;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button {
+      background-color: #00796b;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .feature img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .steps {
+      margin-top: 4rem;
+    }
+
+    .steps h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .step {
+      margin-bottom: 1.5rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .mission {
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Plataforma Educativa Interactiva sobre Arduino</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="juego.html">Juego</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Descubre el mundo de Arduino</h1>
+      <p>Aprende a programar de forma interactiva.</p>
+      <button class="cta-button">¡Comienza tu viaje!</button>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <img src="public/external/imagelummi138-7cj7-300h.png" alt="Proyecto Arduino práctico">
+        <h3>Proyectos Prácticos</h3>
+        <p>Desarrolla proyectos emocionantes con Arduino.</p>
+      </div>
+      <div class="feature">
+        <img src="public/external/imagelummi143-l1zd-300h.png" alt="Material educativo">
+        <h3>Recursos Didácticos</h3>
+        <p>Accede a materiales y guías útiles.</p>
+      </div>
+      <div class="feature">
+        <img src="public/external/imagelummi148-hv5x-300h.png" alt="Comunidad de estudiantes">
+        <h3>Comunidad Activa</h3>
+        <p>Conéctate con otros entusiastas de Arduino.</p>
+      </div>
+      <div class="feature">
+        <img src="public/external/imagelummi153-d4hp-300h.png" alt="Soporte técnico">
+        <h3>Soporte Continuo</h3>
+        <p>Asistencia para resolver tus dudas.</p>
+      </div>
+      <div class="feature">
+        <img src="public/external/imagelummi158-i0kh-300h.png" alt="Tendencias tecnológicas">
+        <h3>Innovación Constante</h3>
+        <p>Mantente al día con las últimas tendencias.</p>
+      </div>
+      <div class="feature">
+        <img src="public/external/imagelummi163-hui-300h.png" alt="Aprendizaje divertido">
+        <h3>Aprendizaje Divertido</h3>
+        <p>Métodos interactivos para un aprendizaje efectivo.</p>
+      </div>
+    </section>
+
+    <section class="steps">
+      <h2>Cómo Funciona</h2>
+      <div class="step">
+        <h3>Paso 1: Regístrate</h3>
+        <p>Accede a recursos y empieza tu aventura con Arduino.</p>
+      </div>
+      <div class="step">
+        <h3>Paso 2: Explora</h3>
+        <p>Consulta proyectos, tutoriales y herramientas.</p>
+      </div>
+      <div class="step">
+        <h3>Paso 3: Comparte</h3>
+        <p>Sube tus creaciones y colabora con otros.</p>
+      </div>
+    </section>
+
+    <section class="mission">
+      <h2>Nuestra Misión</h2>
+      <p>Fomentar el aprendizaje práctico y la creatividad en la programación.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Plataforma Educativa. Todos los derechos reservados.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+/* CSS MEJORADO PARA JUEGO.HTML */
+
+:root {
+  --green-dark: #064e3b;
+  --green: #059669;
+  --green-light: #ecfdf5;
+  --green-accent: #65a30d;
+  --text-color: #222;
+  --font-heading: 'Fugaz One', cursive;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--green-light);
+  color: var(--text-color);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.juego-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+/* CABECERA */
+.juego-type-headerwithsearchbarandsignupcta {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--green-light);
+}
+
+.juego-nav-links1,
+.juego-nav-links2 {
+  display: flex;
+  gap: 16px;
+  padding: 0 16px;
+  align-items: center;
+}
+
+.juego-nav-link1,
+.juego-nav-link2,
+.juego-nav-link3,
+.juego-nav-link4 {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+}
+
+.juego-text10,
+.juego-text11,
+.juego-text12,
+.juego-text13 {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: 'Alegreya', serif;
+}
+
+/* HERO */
+.juego-type-stacked-medium-title-with-large-imageand-description {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 40px;
+  background-color: var(--green-light);
+  align-items: center;
+  text-align: center;
+}
+
+.juego-text15 {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  color: var(--green-dark);
+}
+
+.juego-text16 {
+  font-size: 22px;
+  color: var(--green);
+  font-family: 'Inter', sans-serif;
+}
+
+.juegocta-button1,
+.juegocta-button2,
+.juegocta-button3 {
+  padding: 16px 24px;
+  background-color: var(--green-accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+.juegocta-button3 {
+  border-radius: 999px;
+}
+
+.juego-text17,
+.juego-text34,
+.juego-text43 {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+/* CARDS */
+.juego-feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.juego-cards1,
+.juego-cards2,
+.juego-cards3,
+.juego-cards4,
+.juego-cards5,
+.juego-cards6 {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.juego-copy1,
+.juego-copy2,
+.juego-copy3,
+.juego-copy4,
+.juego-copy5,
+.juego-copy6 {
+  text-align: center;
+}
+
+.juego-text20,
+.juego-text22,
+.juego-text24,
+.juego-text26,
+.juego-text28,
+.juego-text30,
+.juego-text35,
+.juego-text37,
+.juego-text39,
+.juego-text41 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.juego-text21,
+.juego-text23,
+.juego-text25,
+.juego-text27,
+.juego-text29,
+.juego-text31,
+.juego-text33,
+.juego-text36,
+.juego-text38,
+.juego-text40,
+.juego-text42 {
+  font-size: 14px;
+  color: var(--green);
+}
+
+/* IMÁGENES */
+.juego-imagelummi10,
+.juego-imagelummi11,
+.juego-imagelummi12,
+.juego-imagelummi13,
+.juego-imagelummi14,
+.juego-imagelummi15,
+.juego-imagelummi16,
+.juego-imagelummi18,
+.juego-imagelummi19,
+.juego-imagelummi20,
+.juego-imagelummi21,
+.juego-imagelummi22,
+.juego-imagelummi23 {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+/* SECCIÓN CÓMO FUNCIONA */
+.juego-howit-works-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.juego-step1,
+.juego-step2,
+.juego-step3 {
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* PIE DE PÁGINA */
+.juego-type-large-footerwith-dividerand-newsletter {
+  background-color: var(--green-light);
+  padding: 80px 64px;
+  color: var(--green-dark);
+}
+
+.juego-footer-links a,
+.juego-text44,
+.juego-text45,
+.juego-text46,
+.juego-text47 {
+  font-size: 14px;
+  color: var(--green-dark);
+  text-decoration: none;
+}

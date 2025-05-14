@@ -1,0 +1,83 @@
+/* Estilos mejorados para página 404 */
+
+:root {
+  --primary-color: #00796b;
+  --accent-color: #00bfa5;
+  --text-dark: #262626;
+  --bg-light: #f9f9f9;
+  --font-display: 'Fugaz One', cursive;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.not-found-container1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: auto;
+  padding: 2rem;
+}
+
+.not-found-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.not-found-text2 {
+  font-family: var(--font-display);
+  font-size: clamp(96px, 20vw, 252px);
+  font-weight: 900;
+  color: var(--primary-color);
+  margin: -20px 0;
+  letter-spacing: -10px;
+}
+
+.not-found-container3 {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.not-found-text3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.not-found-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-button:hover {
+  background-color: #009e91;
+}

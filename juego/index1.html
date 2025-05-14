@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juego Arduino Interactivo</title>
+
+  <!-- Fuente Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Librerías de p5.js y sonido -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+
+  <!-- Sketch del juego -->
+  <script src="sketch.js" defer></script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #e0f2f1;
+      font-family: "Open Sans", sans-serif;
+      color: #333;
+    }
+
+    canvas {
+      display: block;
+      margin: 20px auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      background-color: #00695c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 24px;
+      margin: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004d40;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- El canvas del juego se insertará aquí dinámicamente -->
+  </main>
+</body>
+
+</html>
